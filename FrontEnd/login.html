@@ -11,38 +11,44 @@
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-<header>
-	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-	<nav>
-		<ul>
-			<li><a href="./index.html">projets</a></li>
-			<li><a href="#contact">contact</a></li>
-			<li><a href="./login.html">login</a></li>
-			<li><a href="https://www.instagram.com/"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
-		</ul>
-	</nav>
-</header>
-<main>
-	<h2 class="login-title">Login</h2>
-		<form id="login-form" action="http://localhost:5678/api/users/login" method="post">
-			<label for="email">E-mail</label>
-			<input id="email" type="email" required="required">
-			<label for="password">Mot de passe</label>
-			<input id="password" type="password" required="required">
-			<div id="error"></div>
-			<input id="connection" type="submit" value="Se connecter">
-		</form>
-	<a id="lostPassword" href="#">Mot de passe oublié</a>
-</main>
+	<div class="container">
+	<header>
+		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+		<nav>
+			<ul>
+				<li><a href="./index.html">projets</a></li>
+				<li><a href="#contact">contact</a></li>
+				<li><a href="./login.html">login</a></li>
+				<li><a href="https://www.instagram.com/"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="contact">
+			<h2>Log in</h2>
+			
+				<form action="#" method="post" id="login-form">
+					
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email">
+					<label for="password">Nom</label>
+					<input type="password" name="password" id="password">
+					<input type="submit" value="Se connecter">
 
-<footer>
-	<nav>
-		<ul>
-			<li>Mentions Légales</li>
-		</ul>
-	</nav>
-</footer>
-<script src="./assets/service.js"></script>
-<script src="./assets/component.js"></script>
+				</form>
+		</section>
+		<a id="lostpassword" href="#">Mot de passe oublié</a>
+	</main>
+	</div>
+	<footer class="footer-fixed">
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
+	<script src="./assets/service.js"></script>
+	<script src="./assets/component.js"></script>
+
 </body>
 </html>

@@ -44,7 +44,7 @@
 			<section id="portfolio">
 				<div class="projet">
 					<h2>Mes Projets</h2>
-					<span class="buttonmodify"><i class="fa-regular fa-pen-to-square"></i> Modifier</span>
+					<div id="buttonmodify" class="buttonmodify"><i class="fa-regular fa-pen-to-square"></i> Modifier</div>
 				</div>
 				<div class="gallery">
 					<!-- <figure>
@@ -107,7 +107,7 @@
 				</form>
 			</section>
 		</main>
-	
+	</div>
 		<footer>
 			<nav>
 				<ul>
@@ -115,19 +115,19 @@
 				</ul>
 			</nav>
 		</footer>
-	</div>
-	<section id="modalOne" class="modal">
+	
+	<section id="modalone" class="modal">
 		<div class="modalcontainer">
 			<div class="modalhead">
 				<div></div>
-				<button class="close">
+				<button id="close-modalone" class="close">
 					<i class="fa-solid fa-xmark"></i>
 				</button>
 				
 			</div>
 			<div class="galerietitle">Galerie photo</div>
 			<div class="modalbody">
-				<div id="modaltwo">
+				<div id="minigalerie">
 
 				</div>
 			</div>
@@ -138,6 +138,53 @@
 			</div>
 		</div>
 	</section>
+
+
+	<section id="modaltwo" class="modal">
+		<div class="modalcontainer">
+			<div class="modalhead">
+				<button id="backone" class="close">
+					<i class="fa-solid fa-arrow-left"></i>
+				</button>
+				<button id="close-modaltwo" class="close">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+				
+			</div>
+			<div class="galerietitle">Ajout photo</div>
+			
+			<form id="modaltwo-form" class="modaltwo-form">
+				<div class="modalbody">
+					<div class="modaltwo-imgcontainer">
+						<div class="modaltwo-icon">
+							<i class="fa-regular fa-image"></i>
+						</div>
+						<label for="addphoto" class="modaltwo-textaddphoto">+ Ajouter photo</label>
+						<input type="file" id="addphoto" name="addphoto" required>
+						<div class="modaltwo-desc">jpg, png : 4mo max</div>
+					</div>
+
+					<label for="phototitle" class="modaltwo-photoinput">Titre</label>
+					<input id="phototitle" type="text" name="phototitle" required>
+					<label for="photoCategories">Catégorie</label>
+					<select id="photocategories" name="photocat" required></select>
+				</div>
+				<div class="modalfoot">
+					<button id="creatework" type="submit">
+						Ajouter une photo
+					</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+
+
+
+	
+
 	<script src="./assets/service.js"></script>
 	<script src="./assets/component.js"></script>
 </body>

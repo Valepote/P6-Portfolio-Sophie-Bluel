@@ -149,20 +149,20 @@ margin: auto;
 #contact h2{
 	margin-bottom: 20px;
 }
-#contact form {
+#contact form, #modaltwo-form .modalbody {
 	text-align: left;
 	margin-top:30px;
 	display: flex;
 	flex-direction: column;
 }
 
-#contact input {
+#contact input, #modaltwo-form .modalbody input, #modaltwo-form .modalbody select {
 	height: 50px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-#contact label {
+#contact label, #modaltwo-form .modalbody label {
 	margin: 2em 0 1em 0;
 }
 #contact textarea {
@@ -170,7 +170,7 @@ margin: auto;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"]{
+input[type="submit"],.button {
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
@@ -202,8 +202,9 @@ footer nav ul {
     color: #1D6154;
     margin: 5px;
 	padding: 10px 50px;
-	border-color: #1D6154;
+	border: 2px solid #1D6154;
 	margin-bottom: 40px;
+	width: fit-content;
 }        
 
 .button:hover {
@@ -224,6 +225,19 @@ body {
 
 footer {
 	background-color: white;
+	margin: 0;
+}
+
+.footer-fixed {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+footer nav ul {
+	margin: 0;
+	padding: 15px;
 }
 
 /*container*/
@@ -261,16 +275,23 @@ footer {
 }
 
 .projet {
-	background-color: red;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 10px;
+	margin-bottom: 40px;
+	background-color: transparent;
 	
+}
+
+#portfolio h2 {
+	margin: 0;
+	padding: 0;
 }
 
 .buttonmodify {
 	cursor: pointer;
+	margin-left: 20px;
 }
 
 /*Modal */
@@ -282,9 +303,10 @@ footer {
 	right: 0;
 	bottom: 0;
 	margin:0;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
+	
 
 }
 
@@ -327,4 +349,99 @@ footer {
 	background-color: #1D6154;
 	color: white;
 	align-items: center;
+}
+
+#lostpassword {
+	display: block;
+	text-align: center;
+	color: black;
+	text-decoration: underline;
+}
+
+.close {
+	cursor: pointer;
+}
+
+.modalbody, .modalfoot {
+	width: 75%;
+	margin: 20px auto;
+}
+
+.modalbody{
+	margin-bottom: 30px;
+
+}
+
+.modalfoot {
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+	padding-top: 30px;
+}
+
+
+/* style minigal */
+
+#minigalerie {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+#minigalerie figure {
+	width: 17%;
+
+	margin: 5px;
+}
+
+#minigalerie figure img {
+	width: 100%;
+}
+
+.delete {
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border: none;
+	border-radius: 2px;
+	position: absolute;
+	margin-left: -25px;
+	margin-top: 5px;
+	color: white;
+	font-size: 8px;
+	cursor: pointer;
+}
+
+/*style modal photo*/
+.modaltwo-imgcontainer {
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #e8f1f6;
+	
+}
+
+.modaltwo-icon {
+	font-size: 4rem;
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.modaltwo-textaddphoto {
+	padding: 10px 20px;
+	background-color:rgba(0, 0, 0, 0.15);
+	color: #306685;
+	border-radius: 25px;
+	margin: 10px 0px;
+	display: block;
+	cursor: pointer;
+}
+
+#addphoto {
+	display: none;
+	
+}
+
+.modaltwo-desc {
+	font-size: 12px;
+	color: #333;
 }
