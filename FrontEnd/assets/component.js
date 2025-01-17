@@ -252,11 +252,13 @@ const minigalerie=document.querySelector("#minigalerie")
     const modaltwoForm=document.querySelector("#modaltwo-form")
 
 if (addphotochamps && phototitlechamps && modaltwoForm){
-    addphotochamps.addEventListener("change", ()=>{
         const icon=document.querySelector(".modaltwo-icon")
         const label=document.querySelector(".modaltwo-textaddphoto")
         const desc=document.querySelector(".modaltwo-desc")
         const imgcontainer=document.querySelector(".modaltwo-imgcontainer")
+        const imgdiv=document.querySelector("#modaltwo-img")
+    addphotochamps.addEventListener("change", ()=>{
+        
         if (icon && label && desc && imgcontainer){
             icon.style.display="none"
             label.style.display="none"
@@ -266,8 +268,9 @@ if (addphotochamps && phototitlechamps && modaltwoForm){
             img.src=URL.createObjectURL(addphotochamps.files[0])
             img.style.width="150px"
             imgcontainer.style.padding="0"
-
-            imgcontainer.append(img)
+            imgdiv.style.display="block"
+            imgdiv.innerHTML=""
+            imgdiv.append(img)
         }
     })
     modaltwoForm.addEventListener("submit",async (event)=>{
@@ -280,7 +283,11 @@ if (addphotochamps && phototitlechamps && modaltwoForm){
        
         await creatework(formData)
        
-
+        icon.style.display="block"
+        label.style.display="block"
+        desc.style.display="block"
+        imgdiv.style.display="none"
+        imgcontainer.style.padding="20px"
         phototitlechamps.value=""
         photoCategories.value=""
 
